@@ -40,7 +40,7 @@ const App: React.FC = () => {
 		if(age < 15){
 			setMessage("15さいみまんにはたいおうしていません。＞＜");
 		}else{
-			setMessage(`${age - 7} 進数 17歳 です！`);
+			setMessage(`${age - 7} 進数で 17歳 です！`);
 		}
 	}
 

@@ -2,21 +2,21 @@ input,
 button,
 textarea,
 select {
-	-webkit-appearance: none;
-	-moz-appearance: none;
-	appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
 
-	font-family: inherit;
-	border-radius: 0;
-	box-sizing: border-box;
-	font-size: 16px;
-	color: inherit;
+  font-family: inherit;
+  border-radius: 0;
+  box-sizing: border-box;
+  font-size: 16px;
+  color: inherit;
 }
 
-input{
-	width: 15%;
+input {
+  width: 15%;
 }
 
-.footer{
-	margin-top: 32px;
+.footer {
+  margin-top: 32px;
 }

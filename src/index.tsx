@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { render } from "react-dom";
 import './styles.css';
+import { TwitterShareButton, TwitterIcon } from "react-share";
 
 const App: React.FC = () => {
 	const [age, setAge] = useState(0);
@@ -20,6 +21,21 @@ const App: React.FC = () => {
 		)
 	}
 
+	const Twitter: React.FC = () => {
+		if(message !== ""){
+			return(
+				<TwitterShareButton 
+					url={`https://tuki9ko.github.io/forever-one-seven-years-old`}
+					title={message}
+				>
+					<TwitterIcon size={32} round/>
+				</TwitterShareButton>
+			);
+		}else{
+			return(<div></div>);
+		}
+	}
+
 	const submit = () =>{
 		if(age < 15){
 			setMessage("15さいみまんにはたいおうしていません。＞＜");
@@ -35,6 +51,7 @@ const App: React.FC = () => {
 				<input type="number" placeholder="10進数の年齢" onChange={handleAgeValue} />
 				<button onClick={submit}>送信</button>
 				<div>{ message }</div>
+				<Twitter />
 			</div>
 			<Footer />
 		</div>

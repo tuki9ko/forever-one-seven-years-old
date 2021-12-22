@@ -14,5 +14,9 @@ select {
 }
 
 input{
-	width: 10%;
+	width: 15%;
+}
+
+.footer{
+	margin-top: 32px;
 }

@@ -48,11 +48,17 @@ const App: React.FC = () => {
   };
 
   const submit = () => {
+    if (!Number.isSafeInteger(age)) {
+      setMessage("しょうすうにはたいおうしていません。＞＜");
+      return;
+    }
+
     if (age < 15) {
       setMessage("15さいみまんにはたいおうしていません。＞＜");
-    } else {
-      setMessage(`${age - 7} 進数で 17歳 です！`);
+      return;
     }
+
+    setMessage(`${age - 7} 進数で 17歳 です！`);
   };
 
   return (
